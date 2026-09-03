@@ -1,4 +1,7 @@
 main {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  background: #eeeff1;
   font-family: 'Roboto', sans-serif;
 }
 h1,
@@ -17,21 +20,19 @@ ul {
   list-style: none;
   position: relative;
 }
-
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 .header {
   position: absolute;
   width: 100%;
 }
-.container {
-  width: 425px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .navigation {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 .navigation__item {
   display: block;
@@ -53,11 +54,6 @@ ul {
   transform: scale(1.1);
   color: plum;
 }
-.main {
-  padding-top: 120px;
-  padding-bottom: 100px;
-  background: #eeeff1;
-}
 .hero_title {
   font-weight: 500;
   font-size: 24px;
@@ -65,7 +61,7 @@ ul {
   margin-bottom: 40px;
 }
 .hero__paragraph {
-  width: 370px;
+  width: 300px;
   font-size: 10px;
   line-height: 1.625;
   color: #727272;
@@ -80,12 +76,13 @@ ul {
   letter-spacing: 0.1em;
   color: #ffffff;
   border: 1px solid black;
-  padding: 15px 30px;
+  padding: 10px 20px;
   transition:
     background-color 1s ease,
     transform 1s ease,
     color 1s ease,
     border 1s ease;
+  margin-bottom: 50px;
 }
 .button__letter:hover {
   background-color: aquamarine;
@@ -99,12 +96,7 @@ ul {
   transform: scaleX(1.1);
   border: 1px solid black;
 }
-.about {
-  width: 425px;
-  padding-top: 80px;
-  padding-bottom: 70px;
-  margin: 0 auto;
-}
+
 .main__title2 {
   font-weight: 500;
   font-size: 20px;
@@ -113,247 +105,118 @@ ul {
   margin-bottom: 30px;
 }
 .main__paragraph {
-  width: 370px;
+  display: block;
+  width: 300px;
   font-size: 10px;
   line-height: 1.625;
   text-align: center;
   color: #727272;
+  margin-bottom: 30px;
 }
-.container__list {
-  width: 425px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-.list {
-  margin-bottom: 40px;
-}
+
 .item__list {
-  width: 370px;
+  width: 300px;
   font-size: 12px;
   margin-bottom: 15px;
 }
-.footer {
+footer {
+  width: 100%;
   background: #34547a;
-  padding: 20px 0;
-  color: #ffffff;
 }
-.footer-container {
-  width: 425px;
-  margin: 0 auto;
-  padding: 0 15px;
+.footer__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.footer p:first-child {
+.footer_autor {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.footer_autor p:first-child {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 8px;
   line-height: 1.19;
   margin-bottom: 10px;
 }
-.footer p:last-child {
-  font-size: 10px;
+
+.footer_autor p:last-child {
+  font-size: 5px;
   line-height: 1.61;
 }
-.container-social {
+
+.footer-social {
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
 }
 svg {
   width: 100%;
   height: 100%;
-  fill: #ffffff;
+  fill: #000000;
   transition: all 1.5s ease;
 }
 svg:hover {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   fill: rgb(219, 7, 42);
 }
 
+@media screen and (min-width: 425px) {
+  .container {
+    width: 425px;
+    padding: 0 20px;
+  }
+  .hero__paragraph {
+    width: 385px;
+  }
+  .main__paragraph {
+    margin: 0 auto 30px;
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 500px;
     padding: 0 30px;
   }
   .navigation {
     gap: 20px;
   }
-  .navigation__item {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 12px;
-  }
-  .main {
-    padding-top: 150px;
-    padding-bottom: 110px;
-  }
-  .hero_title {
-    width: 350px;
-    font-size: 30px;
-    margin-bottom: 45px;
-    color: #34547a;
-  }
-  .hero__paragraph {
-    width: 450px;
-    font-size: 12px;
-    margin-bottom: 45px;
-  }
-
-  .button__letter {
-    font-size: 10px;
-    padding: 20px 40px;
-  }
-  .about {
-    width: 768px;
-    padding-top: 90px;
-    padding-bottom: 80px;
-  }
-  .main__title2 {
-    font-size: 25px;
-    margin-bottom: 40px;
-    color: #71b327;
-  }
-  .main__paragraph {
-    width: 450px;
-    font-size: 12px;
-    line-height: 1.625;
-    color: #11a79f;
-    margin: 0 auto;
-  }
-  .container__list {
-    width: 768px;
-  }
   .list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 50px;
+    gap: 10px;
   }
   .item__list {
-    width: 300px;
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-  .footer {
-    padding: 30px 0;
-  }
-  .footer-container {
-    width: 768px;
-    padding: 0 30px;
-  }
-
-  .footer p:first-child {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  .footer p:last-child {
-    font-size: 12px;
-  }
-  .container-social {
-    gap: 40px;
-  }
-  .icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  svg:hover {
-    width: 30px;
-    height: 30px;
+    width: 200px;
   }
 }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1200px) {
   .container {
-    width: 900px;
-    padding: 0 40px;
+    width: 750px;
+    padding: 0 30px;
   }
-
-  .navigation {
+  .hero_container {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  .navigation__item {
-    display: block;
-    padding-top: 79px;
-    padding-bottom: 79px;
-    font-size: 14px;
-  }
-  .main {
-    padding-top: 255px;
-    padding-bottom: 141px;
-    background: #eeeff1;
+    flex-direction: column;
+    align-items: center;
   }
   .hero_title {
-    width: 500px;
-    font-size: 48px;
-    margin-bottom: 60px;
+    font-weight: 700;
+    font-size: 30px;
   }
   .hero__paragraph {
-    width: 540px;
-    font-size: 16px;
-    margin-bottom: 65px;
+    text-align: center;
   }
-  .button__letter {
-    font-size: 16px;
-    padding: 25px 50px;
-  }
-  .button__letter:hover {
-    background-color: aquamarine;
-    transform: scaleX(1.3);
-  }
-  .about {
-    width: 900px;
-    padding-top: 112px;
-    padding-bottom: 100px;
-  }
-  .main__title2 {
-    font-size: 32px;
-    margin-bottom: 50px;
-  }
-  .main__paragraph {
-    width: 540px;
-    font-size: 16px;
-  }
-  .footer {
-    padding: 50px 0;
-  }
-  .footer-container {
-    width: 1150px;
-  }
-  .footer p:first-child {
-    font-size: 21px;
-    margin-bottom: 20px;
-  }
-  .footer p:last-child {
-    font-size: 13px;
-  }
-  .container-social {
-    gap: 40px;
-  }
-  .icon {
-    width: 40px;
-    height: 40px;
-  }
-  svg:hover {
-    width: 55px;
-    height: 55px;
-  }
-  .container__list {
-    width: 1000px;
-    margin: 0 auto;
-  }
-  .list {
-    margin-bottom: 40px;
-  }
-  .item__list {
-    width: 300px;
+  .last__item {
+    align-self: flex-end;
   }
 }
